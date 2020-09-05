@@ -37,7 +37,16 @@ export const rulesFromOpenApiDefinitions = (openDoc: IOpenApiDocSegment, prepend
           currentPath + '.'
         );
       } else {
-        items = [{ [currentPath]: currentProp.items!.type! }];
+        const arrayType = currentProp.items!.type!;
+        if (arrayType === 'string') {
+          if ((<any>currentProp.items!).format === 'date-time') {
+            items = [{ [currentPath]: 'is a date' }];
+          } else {
+            items = [{ [currentPath]: 'is text' }];
+          }
+        } else if (arrayType.includes('int') || arrayType.includes('float')) {
+          items = [{ [currentPath]: 'is a number' }];
+        }
       }
     } else if (currentProp.type === 'object') {
       items = rulesFromOpenApiDefinitions(currentProp, currentPath + '.');

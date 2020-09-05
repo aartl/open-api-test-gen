@@ -26,7 +26,7 @@ describe('Rule generation', () => {
       { '$.Pet.category.id': 'is a number' },
       { '$.Pet.category.name': 'is text' },
       { '$.Pet.name': 'is text' },
-      { '$.Pet.photoUrls': 'string' },
+      { '$.Pet.photoUrls': 'is text' },
       { '$.Pet.tags.id': 'is a number' },
       { '$.Pet.tags.name': 'is text' },
       { '$.Pet.status': 'is text' },
