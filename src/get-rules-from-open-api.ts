@@ -3,7 +3,7 @@ import { exit } from 'process';
 import { rulesFromOpenApiDefinitions } from './rules';
 
 if (process.argv.length !== 3) {
-  console.log('Usage: node get-rules-from-open-api.ts swagger-doc.json');
+  console.log('Usage: node get-rules-from-open-api.js swagger-doc.json');
   exit(1);
 }
 
