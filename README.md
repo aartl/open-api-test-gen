@@ -1,10 +1,12 @@
 # open-api-test-gen
+
 A test generator that generates AARTL tests from an OpenAPI (formerly known as Swagger) Specification
 
 ## Usage Example
 
     node dist/get-rules-from-open-api.js swagger-doc.json
-    
+    node dist/get-rules-from-open-api.js https://petstore.swagger.io/v2/swagger.json
+
 ## Output Example
 
 ```

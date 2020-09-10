@@ -1,10 +1,11 @@
 {
   "name": "open-api-test-gen",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Open API test generator",
   "main": "index.js",
   "scripts": {
-    "test": "jest --clearCache && jest --coverage"
+    "test": "jest --clearCache && jest --coverage",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,8 @@
   },
   "dependencies": {
     "@types/jsonpath": "^0.2.0",
-    "jsonpath": "^1.0.2"
+    "@types/node-fetch": "^2.5.7",
+    "jsonpath": "^1.0.2",
+    "node-fetch": "^2.6.1"
   }
 }
